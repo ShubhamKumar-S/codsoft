@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My calculator</title>
+        <style>
+            * {margin: 0; padding: 0; box-sizing: border-box; }
+            body{ background-image: url(pexels-photo-604684.webp);
+                background-size: 100% 100%;
+            }
+            .center-cal{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            form{
+                width: 400px; height: 520px;
+                box-shadow: 0 0 1px rgb(225, 224, 216);
+            }
+            #a_name{
+                width: inherit;
+                font-size: 0.8rem;
+                padding: 2px 0 2px 10px;
+                background-color: #303030;
+                color: white;
+                border: none;
+                outline: none;
+            }
+            #display-answer{
+                width: inherit;
+                height: 100px;
+                background-color: #303030;
+                font-size: 2rem;
+                color: white;
+                text-align: right;
+                outline: none;
+                border: none;
+            }
+            .row1{
+                width: inherit;
+                height: 90px;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .row2{
+                width: inherit;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+            }
+            input{ flex: 1; font-size: 1.4rem; color: white; border: 1px solid #504f4f; outline: none;}
+
+            .main-num{
+                background-color: #0b0b0b; color: white;
+            }
+            .oper{
+                background-color: #303030;
+            }
+            input:hover{
+                background-color: #484747;
+                border: 1px solid gray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="center-cal">
+            <form name="cal">
+                <input type="text" name="" value="Calculator" id="a_name">
+                <input type="text" name="answer" id="display-answer">
+                <div class="row2">
+                    <input type="button" name="" class="oper" value="C" id="clearbutton" onclick="cal.answer.value = ' ' ">
+                    <input type="button" name="" class="oper" value="=" onclick="cal.answer.value=eval(cal.answer.value)">
+                    
+                </div>
+                <div class="row1">
+                    <input type="button" name="" class="main-num" value="7" onclick="cal.answer.value+= '7' ">
+                    <input type="button" name="" class="main-num" value="8" onclick="cal.answer.value+= '8' ">
+                    <input type="button" name="" class="main-num" value="9" onclick="cal.answer.value+= '9' ">
+                    <input type="button" name="" class="oper" value="*" onclick="cal.answer.value += '*' ">
+                </div>
+                <div class="row1">
+                    <input type="button" name="" class="main-num" value="4" onclick="cal.answer.value+= '4' ">
+                    <input type="button" name="" class="main-num" value="5" onclick="cal.answer.value+= '5' ">
+                    <input type="button" name="" class="main-num" value="6" onclick="cal.answer.value+= '6' ">
+                    <input type="button" name="" class="oper" value="+" onclick="cal.answer.value += '+' ">
+                </div>
+                <div class="row1">
+                    <input type="button" name="" class="main-num" value="1" onclick="cal.answer.value+= '1' ">
+                    <input type="button" name="" class="main-num" value="2" onclick="cal.answer.value+= '2' ">
+                    <input type="button" name="" class="main-num" value="3" onclick="cal.answer.value+= '3' ">
+                    <input type="button" name="" class="oper" value="-" onclick="cal.answer.value += '-' ">
+                </div>
+                <div class="row1">
+                    <input type="button" name="" class="oper" value="." onclick="cal.answer.value+= '-' ">
+                    <input type="button" name="" class="main-num" value="0" onclick="cal.answer.value+= '0' ">
+                    <input type="button" name="" class="oper" value="%" onclick="cal.answer.value+= '%' ">
+                    <input type="button" name="" class="oper" value="/" onclick="cal.answer.value += '/' ">
+                </div>
+            </form>
+
+        </div>
+    </body>
+</html>
